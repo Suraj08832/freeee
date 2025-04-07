@@ -29,18 +29,14 @@ public class StickerManager {
         allStickers = new ArrayList<>();
         premiumStickers = new ArrayList<>();
         
-        // Add some sample stickers
+        // Add sample stickers - all are free now
         allStickers.add(new Sticker("1", "Happy", "sticker1.png", false, 0));
         allStickers.add(new Sticker("2", "Sad", "sticker2.png", false, 0));
-        allStickers.add(new Sticker("3", "Premium Happy", "premium1.png", true, 100));
-        allStickers.add(new Sticker("4", "Premium Sad", "premium2.png", true, 100));
+        allStickers.add(new Sticker("3", "Premium Happy", "premium1.png", false, 0));
+        allStickers.add(new Sticker("4", "Premium Sad", "premium2.png", false, 0));
         
-        // Separate premium stickers
-        for (Sticker sticker : allStickers) {
-            if (sticker.isPremium()) {
-                premiumStickers.add(sticker);
-            }
-        }
+        // All stickers are now free
+        premiumStickers.addAll(allStickers);
     }
 
     public List<Sticker> getAllStickers() {
@@ -52,10 +48,11 @@ public class StickerManager {
     }
 
     public boolean hasPremiumAccess(String stickerId) {
-        return preferences.getBoolean(PREMIUM_STICKERS_KEY + "_" + stickerId, false);
+        // All stickers are now free
+        return true;
     }
 
     public void grantPremiumAccess(String stickerId) {
-        preferences.edit().putBoolean(PREMIUM_STICKERS_KEY + "_" + stickerId, true).apply();
+        // No need for this anymore as all stickers are free
     }
 } 

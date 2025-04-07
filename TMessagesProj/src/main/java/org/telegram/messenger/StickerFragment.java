@@ -40,19 +40,7 @@ public class StickerFragment extends Fragment implements StickerAdapter.OnSticke
 
     @Override
     public void onStickerClick(Sticker sticker) {
-        // Handle regular sticker click
+        // Handle sticker click
         Toast.makeText(requireContext(), "Sticker clicked: " + sticker.getName(), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onPremiumStickerClick(Sticker sticker) {
-        // Show premium purchase dialog
-        showPremiumPurchaseDialog(sticker);
-    }
-
-    private void showPremiumPurchaseDialog(Sticker sticker) {
-        // Implement your premium purchase dialog here
-        // This could be a custom dialog or integration with Google Play Billing
-        Toast.makeText(requireContext(), "Premium sticker: " + sticker.getName() + " - Price: " + sticker.getPrice(), Toast.LENGTH_SHORT).show();
     }
 } 
