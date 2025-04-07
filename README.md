@@ -12,7 +12,7 @@ Bypass Telegram restrictions for banned countries Or use it as secondary Telegra
 
 ## Telegram messenger for Android
 
-[Telegram](https://telegram.org) is a messaging app with a focus on speed and security. It’s superfast, simple and free.
+[Telegram](https://telegram.org) is a messaging app with a focus on speed and security. It's superfast, simple and free.
 This repo contains the official source code for [Telegram App for Android](https://play.google.com/store/apps/details?id=org.telegram.messenger).
 
 ## Creating your Telegram Application
@@ -43,9 +43,38 @@ You will require Android Studio 3.4, Android NDK rev. 20 and Android SDK 8.1
 3. Fill out RELEASE_KEY_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_STORE_PASSWORD in gradle.properties to access your  release.keystore
 4.  Go to https://console.firebase.google.com/, create two android apps with application IDs org.telegram.messenger and org.telegram.messenger.beta, turn on firebase messaging and download google-services.json, which should be copied to the same folder as TMessagesProj.
 5. Open the project in the Studio (note that it should be opened, NOT imported).
-6. Fill out values in TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java – there’s a link for each of the variables showing where and which data to obtain.
+6. Fill out values in TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java – there's a link for each of the variables showing where and which data to obtain.
 7. You are ready to compile Telegram.
 
 ### Localization
 
 We moved all translations to https://translations.telegram.org/en/android/. Please use it.
+
+# Free Stickers App
+
+A simple Android app that provides free stickers for messaging.
+
+## Features
+- Free stickers for all users
+- Easy to use interface
+- No premium restrictions
+
+## Download
+You can download the latest APK from the [Releases](https://github.com/Suraj08832/freeee/releases) page.
+
+## Installation
+1. Download the APK from the releases page
+2. Enable "Install from Unknown Sources" in your Android settings
+3. Open the downloaded APK file
+4. Click "Install"
+
+## Usage
+1. Open the app
+2. Browse through the available stickers
+3. Click on any sticker to use it
+
+## Building from Source
+1. Clone this repository
+2. Open the project in Android Studio
+3. Build the project
+4. Run on your device or emulator
